@@ -1,0 +1,19 @@
+.a-modal-back-button {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: xd-font-weight('bold');
+  cursor: pointer;
+
+  @include pc {
+    margin-bottom: 13px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .a-icon {
+    margin-right: 8px;
+  }
+}

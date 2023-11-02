@@ -1,0 +1,266 @@
+.a-calendar-field {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    display: flex;
+    pointer-events: none;
+
+    @include sp() {
+      right: 12px;
+    }
+  }
+
+  &--invalid {
+    border-color: $color-primary-red;
+  }
+
+  .a-text-field {
+    width: 100%;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background: $color-grey-2;
+
+    .a-text-field {
+      .a-text-field__input {
+        color: $color-text-fullblack;
+        background: $color-grey-2;
+      }
+    }
+
+    #{$root}__icon {
+      .a-icon {
+        background-image: url('~design/images/icons/calendar-black.svg');
+      }
+    }
+  }
+
+  /* stylelint-disable */
+  .flatpickr {
+    $picker: &;
+
+    &-wrapper {
+      display: block;
+    }
+
+    &-calendar {
+      font-family: $fontset-jp;
+      font-size: 16px;
+      border-radius: 32px;
+      padding: 20px;
+      background: $color-base-white;
+      color: $color-text-black;
+      border: 0;
+      box-shadow: 0 4px 16px rgba($color-base-silver, 40%);
+
+      @include pc {
+        left: auto;
+        transform: none;
+        transition: none;
+      }
+
+      &.static {
+        position: fixed;
+        top: auto;
+      }
+
+      &.arrowTop,
+      &.arrowBottom {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &-months {
+      align-items: center;
+      height: 40px;
+      margin-bottom: 16px;
+
+      .flatpickr {
+        &-month {
+          pointer-events: none;
+          background: none;
+        }
+        &-prev-month,
+        &-next-month {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+
+          &::before {
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 16px;
+            color: $color-primary-purple;
+            content: '';
+            background-color: currentColor;
+            background-size: contain;
+            transform: translate(-50%, -50%);
+            // mask-type: alpha;
+            // mask-image: url('~design/images/icons/arrow-left.svg');
+            background: url('~design/images/icons/arrow-left.svg');
+            top: 50%;
+            left: 50%;
+          }
+
+          &:hover {
+            background: $color-base-white;
+            box-shadow: 0 10px 16px rgba($color-base-lightgray, 40%);
+          }
+
+          &:active {
+            background: $color-base-linen;
+          }
+
+          &.flatpickr-disabled {
+            cursor: not-allowed;
+            background: $color-grey-2;
+            &,
+            &:hover,
+            &:active {
+              box-shadow: none;
+              &::before {
+                color: $color-text-fullblack;
+              }
+            }
+          }
+        }
+        &-next-month {
+          &::before {
+            // mask-image: url('~design/images/icons/arrow-right.svg');
+            background: url('~design/images/icons/arrow-right.svg');
+          }
+        }
+      }
+    }
+    &-current-month {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: xd-font-weight('bold');
+      padding: 0;
+      flex-direction: row-reverse;
+
+      .numInputWrapper {
+        width: auto;
+        &:after {
+          content: '年';
+          display: inline;
+        }
+
+        .cur-year {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: xd-font-weight('bold');
+          display: inline;
+          -webkit-appearance: none;
+          appearance: none;
+          padding: 0;
+          box-shadow: none;
+          width: 44px;
+          position: relative;
+        }
+
+        .arrowUp,
+        .arrowDown {
+          display: none;
+        }
+      }
+      .cur-month {
+        margin: 0;
+      }
+    }
+    &-weekdays {
+      background: none;
+      span.flatpickr-weekday {
+        background: none;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        color: $color-text-black;
+      }
+    }
+    &-innerContainer {
+      border: 0;
+    }
+    &-days {
+      border: 0;
+    }
+    &-day {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      color: $color-text-black;
+      border-radius: 12px;
+      font-family: $fontset-jp;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: xd-font-weight('bold');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        color: $color-primary-purple;
+        background: $color-base-white;
+        box-shadow: 0 10px 16px rgba($color-base-lightgray, 40%);
+      }
+
+      &:active {
+        color: $color-primary-purple;
+        background: $color-base-linen;
+      }
+
+      &.selected {
+        &,
+        &:hover {
+          background: $color-primary-purple-gradient;
+          background: $color-primary-purple-gradient-ms;
+          color: $color-text-white;
+        }
+      }
+
+      &.prevMonthDay,
+      &.nextMonthDay {
+        text-indent: -9999px;
+        pointer-events: none;
+        cursor: default;
+        background: transparent;
+      }
+
+      &.flatpickr-disabled {
+        color: $color-text-gainsboro;
+        cursor: not-allowed;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+  /* stylelint-enable */
+}

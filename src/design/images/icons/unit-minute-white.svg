@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-1" y="3" width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="スクロールグループ_4" data-name="スクロールグループ 4" transform="translate(1 -3)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="unit-yen" transform="translate(0 2)" style="isolation: isolate">
+      <text id="分" transform="translate(7 14)" fill="#FFFFFF" font-size="14" font-family="NotoSansCJKjp-Medium, Noto Sans CJK JP" font-weight="500"><tspan x="-7" y="0">分</tspan></text>
+      <rect id="長方形_11" data-name="長方形 11" width="16" height="16" fill="none"/>
+    </g>
+  </g>
+</svg>

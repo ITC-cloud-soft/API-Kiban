@@ -1,0 +1,16 @@
+.m-notice-info-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 16px;
+    margin-bottom: 24px;
+    list-style: none;
+
+    @include sp() {
+      display: flex;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

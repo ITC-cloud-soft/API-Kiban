@@ -1,0 +1,70 @@
+.m-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &--border {
+    border-bottom: 1px solid $color-grey-3;
+  }
+
+  &--card {
+    padding: 36px 32px 32px;
+    background: $color-base-white;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba($color-base-lightgray, 40%);
+
+    @include sp() {
+      padding: 24px;
+    }
+  }
+
+  &--card-border {
+    padding: 32px;
+    border: 3px solid $color-grey-3;
+    border-radius: 12px;
+  }
+
+  &--fill {
+    padding: 27px 32px 29px;
+    background: $color-base-whitesmoke;
+    border-radius: 24px;
+
+    @include sp() {
+      padding: 20px 24px;
+    }
+  }
+
+  &--fill-white {
+    padding: 27px 32px 29px;
+    background: $color-base-whitesmoke;
+    background: rgba($color-base-white, 80%);
+    border-radius: 24px;
+    backdrop-filter: blur(3px) brightness(1);
+
+    @include sp() {
+      padding: 20px 24px;
+    }
+  }
+
+  &--fullpage {
+    min-height: calc(100% - 32px);
+    padding: 45px 90px;
+    background: $color-base-whitesmoke;
+    background: rgba($color-base-white, 80%);
+    border-radius: 24px;
+    backdrop-filter: blur(3px) brightness(1);
+
+    @include sp() {
+      min-height: calc(100% - 20px);
+      padding: 25px 24px;
+      box-shadow: 0 16px 24px rgba($color-black, 5%);
+    }
+  }
+
+  &--no-padding {
+    padding: 0;
+
+    @include sp() {
+      padding: 0;
+    }
+  }
+}

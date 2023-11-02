@@ -1,0 +1,15 @@
+.a-internal-link {
+  font-size: 16px;
+  font-weight: xd-font-weight('bold');
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary-purple;
+    text-decoration: none;
+  }
+
+  .a-icon {
+    transform: translate(8px, -2px);
+  }
+}

@@ -1,0 +1,41 @@
+.m-upload-list {
+  &__label {
+    font-family: $fontset-jp;
+    font-size: 14px;
+    font-weight: xd-font-weight('bold');
+    line-height: 20px;
+    color: $color-primary-grey;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 11px;
+    margin-top: 17px;
+    border-bottom: 1px solid $color-grey-3;
+  }
+
+  &__file {
+    font-family: $fontset-normal;
+    line-height: 20px;
+  }
+
+  &__file-size {
+    &::before {
+      content: ' (';
+    }
+    &::after {
+      content: ')';
+    }
+  }
+
+  &__button-remove {
+    padding: 5px;
+    margin: -5px;
+    cursor: pointer;
+
+    .a-icon--close {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

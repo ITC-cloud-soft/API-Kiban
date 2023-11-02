@@ -1,0 +1,20 @@
+.a-tag {
+  display: inline-block;
+  padding: 2px 4px 1px;
+  font-size: 10px;
+  font-weight: xd-font-weight('bold');
+  line-height: 15px;
+  color: $color-primary-red;
+  border: 1px solid $color-primary-red;
+  border-radius: 4px;
+
+  &--filled {
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: xd-font-weight('regular');
+    line-height: 18px;
+    color: $color-text-white;
+    background-color: $color-secondary-grey;
+    border: none;
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="16" viewBox="0 0 26 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-6" y="3" width="26" height="16" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect x="1" y="1" width="26" height="18" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="スクロールグループ_8" data-name="スクロールグループ 8" transform="translate(6 -3)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="unit-yen" transform="translate(0 2)" style="isolation: isolate">
+      <g id="スクロールグループ_7" data-name="スクロールグループ 7" transform="translate(-7 -2)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+        <text id="万円" transform="translate(14 16)" fill="#97889b" font-size="14" font-family="NotoSansCJKjp-Medium, Noto Sans CJK JP" font-weight="500"><tspan x="-14" y="0">万円</tspan></text>
+      </g>
+      <rect id="長方形_13" data-name="長方形 13" width="16" height="16" fill="none"/>
+    </g>
+  </g>
+</svg>
